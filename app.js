@@ -1,6 +1,12 @@
 const express = require("express");
+const dotenv = require("dotenv");
+const dbconnect = require("./config/db");
+const clientesRoutes = require("./routes/clientesRoutes");
+const mascotasRoutes = require("./routes/mascotasRoutes");
+
+dotenv.config();
+
 const app = express();
-const dbconnet = require("./config/db");
 
 // Middleware para parsear JSON
 app.use(express.json());
@@ -10,14 +16,19 @@ app.get("/", (req, res) => {
   res.send("El servidor esta funcionando correctamente");
 });
 
-// Conexión a la base de datos e inicio del servidor
-dbconnet()
+// Montar rutas base
+app.use("/api", clientesRoutes); // /api/clientes
+app.use("/api", mascotasRoutes); // /api/mascotas
+
+// Conexión DB + levantar servidor
+dbconnect()
   .then(() => {
-    app.listen("3000", () => {
-      console.log("El servidor esta corriendo en el puerto 3000");
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+      console.log(`El servidor esta corriendo en el puerto ${PORT}`);
     });
   })
-  .catch((err) => {
+  .catch(() => {
     console.log(
       "No se pudo iniciar el servicio debido a un error en la base de datos"
     );
