@@ -1,5 +1,5 @@
-require("dotenv").config();
 const mongoose = require("mongoose");
+require("dotenv").config();
 
 const dbconnect = async () => {
   try {
@@ -7,6 +7,7 @@ const dbconnect = async () => {
     console.log("✅ Conexión exitosa a MongoDB Atlas");
   } catch (error) {
     console.error("❌ Error al conectar a MongoDB Atlas:", error.message);
+    process.exit(1); // Detiene el servidor si hay algún error
   }
 };
 
