@@ -1,0 +1,89 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "CRUD Veterinarias",
+    "dateExported": "2025-10-16T22:09:14.341Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "bad13737-115e-4675-9e0e-7b3d3ee135c1",
+            "colId": "fe39307f-299d-43a0-a21a-16f2431dfa0c",
+            "containerId": "",
+            "name": "Listar clientes",
+            "url": "http://localhost:3000/api/clientes",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-10-16T21:22:42.824Z",
+            "modified": "2025-10-16T21:47:06.251Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d8bba48f-dd3a-452c-a7d4-d6e40876a067",
+            "colId": "fe39307f-299d-43a0-a21a-16f2431dfa0c",
+            "containerId": "",
+            "name": "Obtener por ID",
+            "url": "http://localhost:3000/api/clientes/68f00dfa15228e9577c14691",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2025-10-16T21:48:39.435Z",
+            "modified": "2025-10-16T21:50:22.235Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4092d207-f16b-4f6e-9eed-b08fb3396cdc",
+            "colId": "fe39307f-299d-43a0-a21a-16f2431dfa0c",
+            "containerId": "",
+            "name": "Crear cliente",
+            "url": "http://localhost:3000/api/clientes",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2025-10-16T21:54:48.336Z",
+            "modified": "2025-10-16T21:57:25.985Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"nombre\": \"Jhon Conor\",\r\n  \"telefono\": \"3804515151\",\r\n  \"email\": \"jhon@example.com\"\r\n}\r\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8894ce91-09d1-449c-882f-79cad42f96f8",
+            "colId": "fe39307f-299d-43a0-a21a-16f2431dfa0c",
+            "containerId": "",
+            "name": "Actualizar",
+            "url": "http://localhost:3000/api/clientes/68f16b80f2e44065a76b4ca0",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2025-10-16T21:58:40.837Z",
+            "modified": "2025-10-16T22:06:39.704Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"telefono\": \"3804888888\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "eb3ebe89-3f3f-4fbc-b6e4-e92fd169ee33",
+            "colId": "fe39307f-299d-43a0-a21a-16f2431dfa0c",
+            "containerId": "",
+            "name": "Eliminar",
+            "url": "http://localhost:3000/api/clientes/68f16a45f2e44065a76b4c9c",
+            "method": "DELETE",
+            "sortNum": 80000,
+            "created": "2025-10-16T22:01:14.185Z",
+            "modified": "2025-10-16T22:01:44.314Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

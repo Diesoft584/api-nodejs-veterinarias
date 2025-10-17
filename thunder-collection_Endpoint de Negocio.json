@@ -1,0 +1,62 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Endpoint de Negocio",
+    "dateExported": "2025-10-16T22:24:00.330Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "55617ed5-51dc-48fc-8ce6-e86b8c536e93",
+            "colId": "8eb0347e-5bee-4f41-9ad9-c9ed9f6871dd",
+            "containerId": "",
+            "name": "Listar todas mascotas",
+            "url": "http://localhost:3000/api/mascotas",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-10-16T22:13:13.190Z",
+            "modified": "2025-10-16T22:13:32.786Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5aa4da33-cc86-4197-9ccf-7db971bd09c3",
+            "colId": "8eb0347e-5bee-4f41-9ad9-c9ed9f6871dd",
+            "containerId": "",
+            "name": "Filtrar por cliente",
+            "url": "http://localhost:3000/api/mascotas?cliente_id=68f00e2615228e9577c14693",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-10-16T22:14:25.286Z",
+            "modified": "2025-10-16T22:15:22.546Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "cliente_id",
+                    "value": "68f00e2615228e9577c14693",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "bbe89152-e228-40bd-bfe1-919601d1f7c6",
+            "colId": "8eb0347e-5bee-4f41-9ad9-c9ed9f6871dd",
+            "containerId": "",
+            "name": "Crear mascota",
+            "url": "http://localhost:3000/api/mascotas",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2025-10-16T22:16:07.064Z",
+            "modified": "2025-10-16T22:17:48.598Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"nombre\": \"Terry\",\r\n  \"especie\": \"Perro\",\r\n  \"raza\": \"Callejero\",\r\n  \"edad\": 7,\r\n  \"cliente_id\": \"68f16b80f2e44065a76b4ca0\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
